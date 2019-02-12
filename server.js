@@ -1,14 +1,15 @@
 const express = require('express');
-const path = requre('path');
-const htmlRoute = require(path.join(__dirname, 'app/routing/htmlRoutes.js'))
+const path = require('path');
 const app = express();
-const PORT = 5150;
+var PORT = process.env.PORT || 3000;
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "app/public")));
 
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
-
-
-
-app.listen(PORT, function(){
-
+app.listen(PORT, function () {
+    console.log(`App is now listening on PORT ${PORT}`)
 });
