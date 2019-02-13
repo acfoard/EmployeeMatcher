@@ -1,4 +1,3 @@
-
 const responses = [
     {
         "name": "Ahmed Johnson",
@@ -57,11 +56,30 @@ const responses = [
     },
 ];
 
-const match = function() {
-    return (responses[1]);
+const body = [    {
+    "name": "Chris Jericho",
+    "photo": "https://wwfoldschool.com/wp-content/uploads/2017/03/Chris-Jericho.jpg",
+    "scores": [ 5, 4, 3, 4, 5, 4, 3, 4, 5, 4]
+},
+];
+
+const matchEmp = function (newEmp, empList) {
+    const compatibility = [];
+    for (let i=0; i<empList.length; i++) {
+        const scoreDiffArr = [];
+        for (let j=0; j<empList[i].scores.length; j++) {
+            const diff = Math.abs(newEmp.scores[j] - empList[i].scores[j]);
+            if (diff > 0) {
+                scoreDiffArr.push(diff);
+            };
+        };
+        const sum = scoreDiffArr.reduce(function (accumulator, currentValue) {
+            return accumulator + currentValue;
+          }, 0);
+        const scoreDiff = sum / scoreDiffArr.length;
+        compatibility.push(scoreDiff);
+    };
+    console.log(compatibility);
 };
 
-module.exports = {
-    responses: responses,
-    match: match
-}
+matchEmp(body, responses);
