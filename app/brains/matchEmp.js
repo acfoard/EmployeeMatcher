@@ -4,7 +4,7 @@ const matchEmp = function (newEmp, empList) {
         const scoreDiffArr = [];
         let scoreDiff;
         for (let j = 0; j < empList[i].scores.length; j++) {
-            const diff = Math.abs(newEmp[0].scores[j] - empList[i].scores[j]);
+            const diff = Math.abs(newEmp.scores[j] - empList[i].scores[j]);
             if (diff > 0) {
                 scoreDiffArr.push(diff);
             };

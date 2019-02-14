@@ -1,10 +1,8 @@
 const validate = function () {
     let valid = true;
-    if (!$('#employeeName').val() || !$('#employeeImg').val()) {
+    if (!$('#employeeName').val() || !$('#employeeImg').val() || !$('#q1').val() || !$('#q2').val() || !$('#q3').val() || !$('#q4').val() || !$('#q5').val() || !$('#q6').val() || !$('#q7').val() || !$('#q8').val() || !$('#q9').val() || !$('#q10').val()) {
         valid = false;
-    } else if (!$('#q1').val() || !$('#q2').val() || !$('#q3').val() || !$('#q4').val() || !$('#q5').val() || !$('#q6').val() || !$('#q7').val() || !$('#q8').val() || !$('#q9').val() || !$('#q10').val()) {
-        valid = false;
-    }
+    } 
     return valid;
 };
 

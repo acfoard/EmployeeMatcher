@@ -11,7 +11,8 @@ module.exports = function (app) {
     });
 
     app.post('/api/employees', function(req, res){
+        const match = matcher.matchEmp(req.body, employees.responses)
         employees.responses.push(req.body);
-        res.json(matcher.matchEmp(req.body, employees.responses));
+        res.json(match);
     });
 };
