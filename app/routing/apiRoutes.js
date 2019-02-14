@@ -1,17 +1,17 @@
-const path = require('path');
 const express = require('express');
-surveys = require(path.join(__dirname, '../data/employees.js'));
+const employees = require('../data/employees.js');
+const matcher = require('../brains/matchEmp.js');
 
 module.exports = function (app) {
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
 
     app.get('/api/employees', function (req, res) {
-        res.json(surveys.responses);
+        res.json(employees.responses);
     });
 
     app.post('/api/employees', function(req, res){
-        surveys.responses.push(req.body);
-        res.json(surveys.match(req.body, surveys));
+        employees.responses.push(req.body);
+        res.json(matcher.matchEmp(req.body, employees.responses));
     });
 };
