@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Employee Survey</title>
 </head>
 
@@ -14,136 +16,153 @@
     <main class="container">
         <header class="row">
             <div class="col">
-                <h1>Survey Questions</h1>
+                <h1><i class="fas fa-file-contract"></i> Survey Questions</h1>
             </div>
         </header>
-        <div class="row">
-            <div class="col">
+        <div class="row" id="surveyBg">
+            <div class="col-12">
                 <form>
-                    <div class="form-group">
-                        <label for="employeeName">Name (Required)</label>
-                        <input type="text" class="form-control" id="employeeName" placeholder="John Doe">
+                    <div class="form-row form-group">
+                        <div class="col">
+                            <h4>Name (Required)</h4>
+                            <input type="text" class="form-control" id="employeeName" placeholder="John Doe">
+                        </div>
+                        <div class="col">
+                            <h4>Link to Photo (Required)<h4>
+                            <input type="text" class="form-control" id="employeeImg"
+                                placeholder="http://www.johndoe.com/image.jpg">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="employeeImg">Link to Photo (Required)</label>
-                        <input type="text" class="form-control" id="employeeImg"
-                            placeholder="http://www.johndoe.com/image.jpg">
+                    <div class="form-row form-group">
+                        <div class="col">
+                            <label class="font-weight-bold" for="question1">1. I believe I am fairly compensated.</label>
+                            <select class="survey form-control" id="q1">
+                                <option value selected disabled>Choose one</option>
+                                <option value=1>1 - Strongly Disagree</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5 - Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="font-weight-bold" for="question2">2. The happiest parts of my week are when I am
+                                at work.</label>
+                            <select class="survey form-control" id="q2">
+                                <option value selected disabled>Choose one</option>
+                                <option value=1>1 - Strongly Disagree</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5 - Strongly Agree</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="question1">I believe I am fairly compensated</label>
-                        <select class="survey form-control" id="q1">
-                            <option value selected disabled>Choose one</option>
-                            <option value=1>1 - Strongly Disagree</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5 - Strongly Agree</option>
-                        </select>
+                    <div class="form-row form-group">
+                        <div class="col">
+                            <label class="font-weight-bold" for="question3">3. I do/will vaccinate my children.</label>
+                            <select class="survey form-control" id="q3">
+                                <option value selected disabled>Choose one</option>
+                                <option value=1>1 - Strongly Disagree</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5 - Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="font-weight-bold" for="question4">4. Tom Brady is a cheater.</label>
+                            <select class="survey form-control" id="q4">
+                                <option value selected disabled>Choose one</option>
+                                <option value=1>1 - Strongly Disagree</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5 - Strongly Agree</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="question2">The happiest parts of my week are when I am at work.</label>
-                        <select class="survey form-control" id="q2">
-                            <option value selected disabled>Choose one</option>
-                            <option value=1>1 - Strongly Disagree</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5 - Strongly Agree</option>
-                        </select>
+                    <div class="form-row form-group">
+                        <div class="col">
+                            <label class="font-weight-bold" for="question5">5. I believe in a thing called love.</label>
+                            <select class="survey form-control" id="q5">
+                                <option value selected disabled>Choose one</option>
+                                <option value=1>1 - Strongly Disagree</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5 - Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="font-weight-bold" for="question6">6. I put my shopping cart in the cart return
+                                every time I
+                                shop.</label>
+                            <select class="survey form-control" id="q6">
+                                <option value selected disabled>Choose one</option>
+                                <option value=1>1 - Strongly Disagree</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5 - Strongly Agree</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="question3">I do/will vaccinate my children.</label>
-                        <select class="survey form-control" id="q3">
-                            <option value selected disabled>Choose one</option>
-                            <option value=1>1 - Strongly Disagree</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5 - Strongly Agree</option>
-                        </select>
+                    <div class="form-row form-group">
+                        <div class="col">
+                            <label class="font-weight-bold" for="question7">7. I brush and floss twice daily.</label>
+                            <select class="survey form-control" id="q7">
+                                <option value selected disabled>Choose one</option>
+                                <option value=1>1 - Strongly Disagree</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5 - Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="font-weight-bold" for="question8">8. On any given day, at 1:23pm, my bed is
+                                made.</label>
+                            <select class="survey form-control" id="q8">
+                                <option value selected disabled>Choose one</option>
+                                <option value=1>1 - Strongly Disagree</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5 - Strongly Agree</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="question4">Tom Brady is a cheater.</label>
-                        <select class="survey form-control" id="q4">
-                            <option value selected disabled>Choose one</option>
-                            <option value=1>1 - Strongly Disagree</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5 - Strongly Agree</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="question5">I believe in a thing called love.</label>
-                        <select class="survey form-control" id="q5">
-                            <option value selected disabled>Choose one</option>
-                            <option value=1>1 - Strongly Disagree</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5 - Strongly Agree</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="question6">I put my shopping cart in the cart return every time I
-                            shop.</label>
-                        <select class="survey form-control" id="q6">
-                            <option value selected disabled>Choose one</option>
-                            <option value=1>1 - Strongly Disagree</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5 - Strongly Agree</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="question7">I brush and floss twice daily.</label>
-                        <select class="survey form-control" id="q7">
-                            <option value selected disabled>Choose one</option>
-                            <option value=1>1 - Strongly Disagree</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5 - Strongly Agree</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="question8">On any given day, at 1:23pm, my bed is made.</label>
-                        <select class="survey form-control" id="q8">
-                            <option value selected disabled>Choose one</option>
-                            <option value=1>1 - Strongly Disagree</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5 - Strongly Agree</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="question9">I've never seen the inside of a Turkish Prison</label>
-                        <select class="survey form-control" id="q9">
-                            <option value selected disabled>Choose one</option>
-                            <option value=1>1 - Strongly Disagree</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5 - Strongly Agree</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="question10">I often find myself quoting the movie "Hot Fuzz".</label>
-                        <select class="survey form-control" id="q10">
-                            <option value selected disabled>Choose one</option>
-                            <option value=1>1 - Strongly Narp</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5 - Strongly Yarp</option>
-                        </select>
+                    <div class="form-row form-group">
+                        <div class="col">
+                            <label class="font-weight-bold" for="question9">9. I've never seen the inside of a Turkish
+                                Prison.</label>
+                            <select class="survey form-control" id="q9">
+                                <option value selected disabled>Choose one</option>
+                                <option value=1>1 - Strongly Disagree</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5 - Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="font-weight-bold" for="question10">10. I often find myself quoting the movie "Hot
+                                Fuzz".</label>
+                            <select class="survey form-control" id="q10">
+                                <option value selected disabled>Choose one</option>
+                                <option value=1>1 - Strongly Narp</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5 - Strongly Yarp</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="d-none text-center bg-warning text-dark border border-danger" id="invalid">
                         <p>Please answer all survey questions before submitting</p>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="submitSurvey">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="submitSurvey"><i class="fas fa-user-check"></i> Submit</button>
                 </form>
             </div>
             <div class="modal" tabindex="-1" role="dialog" id="matchEmp">
@@ -155,13 +174,13 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            <img id="empPic">
-                            <div id="empName"></div>
+                        <div class="modal-body mx-auto">
+                            <img id="empPic" class="img-fluid mw-100">
+                            <h4 id="empName"></h4>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Sweet!</button>
                     </div>
                 </div>
             </div>
